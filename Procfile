@@ -1,0 +1,1 @@
+web: /var/app/venv/staging-LQM1lest/bin/gunicorn --bind 127.0.0.1:8501 --workers=1 --threads=15 application:app
