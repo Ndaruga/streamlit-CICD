@@ -7,12 +7,7 @@ WORKDIR /app
 # Copy the requirements.txt file to the container
 COPY requirements.txt .
 
-# Install the dependencies using conda and pip
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
-RUN bash ~/miniconda.sh -b -p /opt/conda
-ENV PATH="/opt/conda/bin:$PATH"
-
-RUN conda install -c conda-forge hdbscan &&
+# Install the dependencies using pip
 RUN pip install -r requirements.txt
 
 # Copy the rest of the files to the container
