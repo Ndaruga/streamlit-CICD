@@ -4,7 +4,7 @@ import pandas as pd
 
 
 # Add a welcome message 
-st.write('Welcome to my Streamlit app!') 
+st.title('Welcome to my Streamlit app!') 
 
 st.warning('This is a warning', icon="⚠️")
 # Create a text input 
