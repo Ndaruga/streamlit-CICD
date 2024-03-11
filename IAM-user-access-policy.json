@@ -1,0 +1,51 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "iam:ListPolicies",
+                "iam:CreateInstanceProfile",
+                "iam:ListRoles",
+                "iam:CreateRole",
+                "iam:AttachRolePolicy",
+                "iam:AddRoleToInstanceProfile",
+                "iam:ListInstanceProfilesForRole",
+                "iam:DeleteRole",
+                "iam:GetPolicy",
+                "iam:DetachUserPolicy",
+                "iam:DetachRolePolicy",
+                "iam:ListUsers",
+                "iam:ListGroups",
+                "iam:ListEntitiesForPolicy",
+                "iam:RemoveRoleFromInstanceProfile",
+                "iam:DeleteInstanceProfile",
+                "iam:ListAccessKeys",
+                "iam:CreateAccessKey",
+                "iam:DeleteAccessKey",
+                "iam:GetAccessKeyLastUsed",
+                "iam:GetLoginProfile"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Action": [
+                "codepipeline:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "ec2fullaccess",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:*"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}
